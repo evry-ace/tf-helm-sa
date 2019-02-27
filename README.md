@@ -15,8 +15,8 @@ module "tf-helm-sa" {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
-| tf_helm_sa_name | Service account name | string | `""` | no |
-| tf_helm_sa_namespace | Service account namespace | string | `""` | no |
+| tf_helm_sa_name | Service account name | string | `tiller` | no |
+| tf_helm_sa_namespace | Service account namespace | string | `kube-system` | no |
 
 ## Authors
 
