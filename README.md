@@ -7,7 +7,7 @@ create a service account for helm's in-cluster component Tiller, which interacts
 
 ```hcl
 module "tf-helm-sa" {
-  source = "github.com/evry-ace/tf_helm_sa"
+  source = "github.com/evry-ace/tf-helm-sa"
 }
 ```
 
