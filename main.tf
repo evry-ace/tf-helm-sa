@@ -10,7 +10,7 @@ resource "kubernetes_service_account" "tf_helm_sa" {
   metadata {
     name      = "${var.tf_helm_sa_name}"
     namespace = "${var.tf_helm_sa_namespace}"
-    annotations = "${merge(local.annotations, var.annotations)}"
+    annotations = "${local.annotations}"
   }
 }
 
@@ -19,7 +19,7 @@ resource "kubernetes_cluster_role_binding" "tf_helm_sa" {
 
   metadata {
     name = "tiller"
-    annotations = "${merge(local.annotations, var.annotations)}"
+    annotations = "${local.annotations}"
   }
 
   subject {
