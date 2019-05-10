@@ -8,8 +8,8 @@ locals {
 
 resource "kubernetes_service_account" "tf_helm_sa" {
   metadata {
-    name      = "${var.tf_helm_sa_name}"
-    namespace = "${var.tf_helm_sa_namespace}"
+    name        = "${var.tf_helm_sa_name}"
+    namespace   = "${var.tf_helm_sa_namespace}"
     annotations = "${local.annotations}"
   }
 }
@@ -18,7 +18,7 @@ resource "kubernetes_cluster_role_binding" "tf_helm_sa" {
   depends_on = ["kubernetes_service_account.tf_helm_sa"]
 
   metadata {
-    name = "tiller"
+    name        = "tiller"
     annotations = "${local.annotations}"
   }
 
