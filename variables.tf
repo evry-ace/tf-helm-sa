@@ -1,6 +1,7 @@
 variable "owner" {
-  default     = ""
+  default = ""
 }
+
 variable "tf_helm_sa_name" {
   description = "Tiller service account name"
   default     = "tiller"
